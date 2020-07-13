@@ -47,12 +47,11 @@ y_test = y[test_ind,]
 
 
 ##########use GPU#############################################
-#if CPU only, comment the above lines#########################
+#if CPU only, comment the below lines#########################
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 config = ConfigProto()
 #config.gpu_options.per_process_gpu_memory_fraction = 0.9
 session = InteractiveSession(config=config)
-
 
 #############model############################################
 inp = Input(shape=(91,500,1),dtype = 'float32')
